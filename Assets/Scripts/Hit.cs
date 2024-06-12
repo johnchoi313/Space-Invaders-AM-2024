@@ -19,6 +19,7 @@ public class Hit : MonoBehaviour
 
             if (distance < hitDistance)
             {
+                Debug.Log("Somebody " + target.name + " was hit!");
                 Destroy(bullet);
                 Destroy(target);
             }
