@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 1070437805}
   - component: {fileID: 1070437809}
   - component: {fileID: 1070437810}
+  - component: {fileID: 1070437811}
   m_Layer: 0
   m_Name: EnemyCube
   m_TagString: Untagged
@@ -448,6 +449,22 @@ MonoBehaviour:
   bullet: {fileID: 8198404030433029193, guid: 67e787f7c9089974cb60896fa790cc86, type: 3}
   shootMinTime: 1
   shootMaxTime: 3
+  shootTimer: 0
+--- !u!114 &1070437811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070437804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0ab8d24e0baf44ca14de3f6c2e5cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1070437804}
+  tagName: PlayerBullet
+  hitDistance: 1
 --- !u!1 &1135528138
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +479,7 @@ GameObject:
   - component: {fileID: 1135528139}
   - component: {fileID: 1135528143}
   - component: {fileID: 1135528144}
+  - component: {fileID: 1135528145}
   m_Layer: 0
   m_Name: PlayerCube
   m_TagString: Untagged
@@ -583,6 +601,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1135528138}
   bullet: {fileID: 9220822326148953922, guid: 61112a5e1b2872849bd97b819ecd3656, type: 3}
+--- !u!114 &1135528145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135528138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0ab8d24e0baf44ca14de3f6c2e5cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1135528138}
+  tagName: EnemyBullet
+  hitDistance: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
