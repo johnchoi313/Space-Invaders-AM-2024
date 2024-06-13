@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hit : MonoBehaviour
+public class EnemyHit : MonoBehaviour
 {
     public GameObject target;
     public string tagName = "";
     public float hitDistance = 1f;
 
     public GameObject explosion;
+
+    public GameManager gameManager;
 
     // Update is called once per frame
     void Update()
@@ -22,6 +24,9 @@ public class Hit : MonoBehaviour
             if (distance < hitDistance)
             {
                 Debug.Log("Somebody " + target.name + " was hit!");
+
+                gameManager.IncreaseScore(1);
+
                 GameObject explosionCopy = Instantiate(explosion, target.transform.position, target.transform.rotation);
                 Destroy(explosionCopy, 3);
                 Destroy(bullet);
