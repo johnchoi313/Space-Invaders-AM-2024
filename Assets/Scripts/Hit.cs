@@ -8,6 +8,8 @@ public class Hit : MonoBehaviour
     public string tagName = "";
     public float hitDistance = 1f;
 
+    public GameObject explosion;
+
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +22,8 @@ public class Hit : MonoBehaviour
             if (distance < hitDistance)
             {
                 Debug.Log("Somebody " + target.name + " was hit!");
+                GameObject explosionCopy = Instantiate(explosion, target.transform.position, target.transform.rotation);
+                Destroy(explosionCopy, 3);
                 Destroy(bullet);
                 Destroy(target);
             }
